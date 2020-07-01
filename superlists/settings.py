@@ -124,3 +124,11 @@ LOGGING = {
 }
 
 AUTH_USER_MODEL = 'accounts.User'
+AUTHENTICATION_BACKENDS = ['accounts.authentication.PasswordlessAuthenticationBackend']
+
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_HOST_USER = 'sk@idaproject.com'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+EMAIL_PORT = 465
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
